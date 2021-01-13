@@ -8,10 +8,7 @@ namespace InheritancePolymorphismTask
 {
     abstract class Person
     {
-        public virtual void Breath()
-        {
-            Console.WriteLine("Person is breathing");
-            Console.ReadKey();
-        }
+        public abstract void Breath();
+
     }
 }
