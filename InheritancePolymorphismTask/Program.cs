@@ -12,8 +12,13 @@ namespace InheritancePolymorphismTask
         {
             Student student = new Student();
             Teacher teacher = new Teacher();
+
             student.Breath();
             teacher.Breath();
+
+            student.Study();
+
+            student.PrintSubjects();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InheritancePolymorphismTask
 {
-    class Teacher: Person
+    public class Teacher: Person
     {
         public override void Breath()
         {

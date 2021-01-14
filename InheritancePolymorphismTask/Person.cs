@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InheritancePolymorphismTask
 {
-    abstract class Person
+    abstract public class Person
     {
         public abstract void Breath();
 
