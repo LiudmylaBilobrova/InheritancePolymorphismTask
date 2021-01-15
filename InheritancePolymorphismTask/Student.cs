@@ -11,7 +11,7 @@ namespace InheritancePolymorphismTask
         public Student()
         {
 
-            this.subjectsList = new Dictionary<string, int>();
+            //this.subjectsList = new Dictionary<string, int>();
         }
 
         public override void Breath()
@@ -26,38 +26,44 @@ namespace InheritancePolymorphismTask
             //Console.ReadKey();
         }
 
-        public void Subjects()
-        {
-            Dictionary<string, int> subjects = new Dictionary<string, int>();
-            subjects.Add("Physics", 95);
-            subjects.Add("Analytic geometry", 86);
-            subjects.Add("Linear algebra", 88);
-            subjects.Add("Physical training", 61);
-            subjects.Add("History", 76);
 
-        }
+        public Dictionary<string, int> subjectsList;
 
-        private readonly Dictionary<string, int> subjectsList;
-
-        public Dictionary<string, int> SubjectsList
+        /*public Dictionary<string, int> SubjectsList
         {
             get
             {
                 return subjectsList;
             }
         }
+        */
+
+        /*public void AddToSubjects(string subjectName, int studentMark)
+        {
+            subjectsList.Add(subjectName, studentMark);
+        }*/
 
         public void PrintSubjects()
         {
             Console.WriteLine("Subjects and marks of the student:");
             foreach (var item in subjectsList)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.Key + ": " + item.Value);
                 Console.ReadKey();
             }
-            Console.ReadKey();
-
         }
+
+        public double AvgMarks()
+        {
+            return subjectsList.Average(t => t.Value);
+        }
+
+        public void ReturnAvgMarks()
+        {
+            Console.WriteLine($"Average mark of subjects: {AvgMarks()}");
+            Console.ReadKey();
+        }
+
 
     }
 }
