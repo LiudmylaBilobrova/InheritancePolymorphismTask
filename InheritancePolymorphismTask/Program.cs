@@ -21,7 +21,7 @@ namespace InheritancePolymorphismTask
                 subjects.Add("Physical training", 61);
                 subjects.Add("History", 76);
 
-            student.subjectsList = subjects;
+            student.subjects = subjects;
 
             student.Breath();
             teacher.Breath();
@@ -30,7 +30,7 @@ namespace InheritancePolymorphismTask
 
             student.PrintSubjects();
 
-            student.ReturnAvgMarks();
+            student.PrintAvgMarks();
         }
     }
 }
