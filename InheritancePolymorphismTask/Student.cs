@@ -29,7 +29,6 @@ namespace InheritancePolymorphismTask
             foreach (var item in subjects)
             {
                 Console.WriteLine(item.Key + ": " + item.Value);
-                Console.ReadKey();
             }
         }
 
@@ -41,7 +40,6 @@ namespace InheritancePolymorphismTask
         public void PrintAvgMarks()
         {
             Console.WriteLine($"Average mark of subjects: {AvgMarks()}");
-            Console.ReadKey();
         }
 
     }

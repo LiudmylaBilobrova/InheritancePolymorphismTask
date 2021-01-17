@@ -11,7 +11,30 @@ namespace InheritancePolymorphismTask
         public override void Breath()
         {
             Console.WriteLine("Teacher is breathing");
-            Console.ReadKey();
         }
+
+        public Teacher()
+        {
+            SubjectName = "Math";
+        }
+
+        public string SubjectName { get; set; }
+
+
+        public void Explain()
+        {
+            Console.WriteLine($"Teacher explains: {SubjectName}");
+        }
+
+        public void Reverse()
+        {
+            Console.WriteLine(string.Concat(SubjectName.Reverse()));
+        }
+
+        public void Argue()
+        {
+            Console.WriteLine(SubjectName.ToUpper());
+        }
+
     }
 }

@@ -10,16 +10,17 @@ namespace InheritancePolymorphismTask
     {
         static void Main(string[] args)
         {
+            Dictionary<string, int> subjects = new Dictionary<string, int>();
+            subjects.Add("Physics", 95);
+            subjects.Add("Analytic geometry", 86);
+            subjects.Add("Linear algebra", 88);
+            subjects.Add("Physical training", 61);
+            subjects.Add("History", 76);
+
+
             Student student = new Student();
             Teacher teacher = new Teacher();
 
-
-                Dictionary<string, int> subjects = new Dictionary<string, int>();
-                subjects.Add("Physics", 95);
-                subjects.Add("Analytic geometry", 86);
-                subjects.Add("Linear algebra", 88);
-                subjects.Add("Physical training", 61);
-                subjects.Add("History", 76);
 
             student.subjects = subjects;
 
@@ -31,6 +32,12 @@ namespace InheritancePolymorphismTask
             student.PrintSubjects();
 
             student.PrintAvgMarks();
+
+            teacher.Explain();
+
+            teacher.Reverse();
+
+            teacher.Argue();
         }
     }
 }

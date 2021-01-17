@@ -9,6 +9,5 @@ namespace InheritancePolymorphismTask
     abstract public class Person
     {
         public abstract void Breath();
-
     }
 }
