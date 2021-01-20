@@ -17,15 +17,15 @@ namespace InheritancePolymorphismTask
             subjects.Add("Physical training", 61);
             subjects.Add("History", 76);
 
-
             Student student = new Student();
-            Teacher teacher = new Teacher();
+
+            Teacher teacher1 = new Teacher("Visiliy Petrovich", "Geography");
 
 
             student.subjects = subjects;
 
             student.Breath();
-            teacher.Breath();
+            teacher1.Breath();
 
             student.Study();
 
@@ -33,11 +33,11 @@ namespace InheritancePolymorphismTask
 
             student.PrintAvgMarks();
 
-            teacher.Explain();
+            teacher1.Explain();
 
-            teacher.Reverse();
+            teacher1.Reverse();
 
-            teacher.Argue();
+            teacher1.Argue();
         }
     }
 }

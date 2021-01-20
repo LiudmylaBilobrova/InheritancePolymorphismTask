@@ -8,17 +8,20 @@ namespace InheritancePolymorphismTask
 {
     public class Teacher: Person
     {
+        public string TeacherName { get; set; }
+
+        public string SubjectName { get; set; }
+
+        public Teacher(string teacherName, string subjectName = "Math")
+        {
+            this.TeacherName = teacherName;
+            this.SubjectName = subjectName;
+        }
+
         public override void Breath()
         {
             Console.WriteLine("Teacher is breathing");
         }
-
-        public Teacher()
-        {
-            SubjectName = "Math";
-        }
-
-        public string SubjectName { get; set; }
 
 
         public void Explain()
@@ -34,6 +37,7 @@ namespace InheritancePolymorphismTask
         public void Argue()
         {
             Console.WriteLine(SubjectName.ToUpper());
+            Console.ReadLine();
         }
 
     }
